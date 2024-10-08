@@ -1,0 +1,12 @@
+{
+  "mockedWorkflows": [
+    {
+      "mockFilePath": "Mocks\\Framework - Default\\CloseConfigFile_mock.xaml",
+      "sourceWorkflowPath": "Framework - Default\\CloseConfigFile.xaml"
+    },
+    {
+      "mockFilePath": "Mocks\\Framework - NewDawn\\Dispatcher_mock.xaml",
+      "sourceWorkflowPath": "Framework - NewDawn\\Dispatcher.xaml"
+    }
+  ]
+}
