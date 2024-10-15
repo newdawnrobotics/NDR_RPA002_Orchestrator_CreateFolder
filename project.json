@@ -1,6 +1,6 @@
 {
-  "name": "ClientName_RobotNumber_ProcessTitle",
-  "description": "NewDawn Framework with Dispatcher and Performer and creation of queue items for the reports",
+  "name": "NDR_Orchestrator_CreateFolder",
+  "description": "Create folders in the orchestrator",
   "main": "Main.xaml",
   "dependencies": {
     "NDR.Common.Activities": "[1.0.62]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.2-alpha",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -99,6 +99,27 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Tests\\Framework - Default\\DeleteTempFiles_TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "899814f0-f76a-4bfc-8641-dd4680c12013",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Custom\\AssignUsersToFolder_TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "fccecc36-4c3e-4e42-99cc-e20aa5d2c350",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Custom\\PerformAPICall_CloudOrchestarotr_GET_TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "96983ebc-1d3c-419a-8874-52d3e10f457a",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Custom\\PerformAPICall_CloudOrchestrator_DirectoryService_GET_TestCase.xaml"
       }
     ],
     "modernBehavior": true

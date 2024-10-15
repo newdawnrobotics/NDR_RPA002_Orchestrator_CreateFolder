@@ -1,0 +1,6 @@
+﻿{
+    "DisplayName": "[DisplayName]",
+    "ProvisionType": "Automatic",
+    "PermissionModel": "FineGrained",
+    "FeedType": "FolderHierarchy"
+}

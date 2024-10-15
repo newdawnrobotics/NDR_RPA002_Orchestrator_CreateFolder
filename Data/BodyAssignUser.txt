@@ -1,0 +1,15 @@
+﻿{
+    "assignment": {
+        "Domain": "autogen",
+        "DirectoryIdentifier": "[DirectoryKey]",
+        "UserType": "DirectoryGroup",
+        "RolesPerFolder": [
+            {
+                "FolderId": [FolderID],
+                "RoleIds": [
+                    [RoleID]
+                ]
+            }
+        ]
+    }
+}
