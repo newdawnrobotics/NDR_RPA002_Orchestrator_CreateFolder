@@ -2,13 +2,12 @@
   <x:Members>
     <x:Property Name="in_Tenant" Type="InArgument(x:String)" />
     <x:Property Name="in_Customer" Type="InArgument(x:String)" />
-    <x:Property Name="in_ADGroup" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="The original prefix from the config. The tenant name must be replaced by the value from the transaction item." Name="in_OrchestratorCloudPrefix" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1084,1840</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1084,1877</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -47,6 +46,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,7 +108,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Process2" sap:VirtualizedContainerService.HintSize="1094,1775" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Process2" sap:VirtualizedContainerService.HintSize="1094,1812" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="JSONOutput" />
       <Variable x:TypeArguments="x:String" Name="UserKey_AutomationLeads" />
@@ -118,6 +118,8 @@
       <Variable x:TypeArguments="x:String" Name="RoleID_AutomationDeveloperNewDawn" />
       <Variable x:TypeArguments="x:String" Name="FolderID" />
       <Variable x:TypeArguments="x:String" Name="RoleID_FolderAdministrator" />
+      <Variable x:TypeArguments="x:String" Name="GroupID_RoleDevKlant" />
+      <Variable x:TypeArguments="x:String" Name="RoleID_AutomationUser" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -125,7 +127,7 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-        <x:Double x:Key="Height">1738.1</x:Double>
+        <x:Double x:Key="Height">1775.3</x:Double>
         <x:Double x:Key="Width">1060</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -142,12 +144,12 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;[Framework] Process - Start&quot;]" />
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID11">
+        <FlowStep x:Name="__ReferenceID8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">83,199.5</av:Point>
               <av:Size x:Key="ShapeSize">434,113</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,312.5 300,349.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">300,313.5 300,349.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap2010:Annotation.AnnotationText="Set the tenant to the prefix." DisplayName="Assign OrchestratorCloudPrefix" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -193,7 +195,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">199.8,465.1</av:Point>
                       <av:Size x:Key="ShapeSize">200,83</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">299.8,548.1 299.8,846.3</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">299.8,549.1 299.8,626.3</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get Key of role_so" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -214,9 +216,9 @@
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">199.8,846.3</av:Point>
+                          <av:Point x:Key="ShapeLocation">199.8,626.3</av:Point>
                           <av:Size x:Key="ShapeSize">200,81</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">299.8,927.3 299.8,957.3 300,957.3 300,1002.54</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">299.8,707.3 299.8,737.3 300,737.3 300,782.54</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="POST - Create Folder" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -228,7 +230,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ReadTextFile File="{x:Null}" Content="[BodyFolder]" DisplayName="Read Text File" FileName="Data\BodyFolder.txt" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_4">
+                        <ui:ReadTextFile File="{x:Null}" Content="[BodyFolder]" DisplayName="Read Text File" FileName="Data\BodyFolder.txt" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ReadTextFile_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,7 +256,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MultipleAssign>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PerformAPICAll_CloudOrchestrator_POST.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Custom\PerformAPICAll_CloudOrchestrator_POST.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PerformAPICAll_CloudOrchestrator_POST.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Custom\PerformAPICAll_CloudOrchestrator_POST.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <OutArgument x:TypeArguments="njl:JObject" x:Key="out_JSONResponse">[JSONOutput]</OutArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_RelativeEndpoint">/odata/Folders</InArgument>
@@ -276,12 +278,12 @@
                         </Assign>
                       </Sequence>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID7">
+                        <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,1002.54</av:Point>
+                              <av:Point x:Key="ShapeLocation">200,782.54</av:Point>
                               <av:Size x:Key="ShapeSize">200,94</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,1096.54 300,1149.34</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">300,876.54 300,891.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get RoleID of Automation Developer - NewDawn" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -299,12 +301,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:InvokeWorkflowFile>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID10">
+                            <FlowStep x:Name="__ReferenceID7">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">200,1149.34</av:Point>
+                                  <av:Point x:Key="ShapeLocation">200,891.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,94</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">300,1243.34 300,1315.5</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,985.5 300,1008.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get RoleID of Folder Administrator" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -322,41 +324,42 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID8">
+                                <FlowStep x:Name="__ReferenceID10">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">200,1315.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">300,1398.5 300,1428.3</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">200,1008.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,94</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">300,1102.5 300,1152.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assing RoleSO to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Custom\AssignUsersToFolder.xaml">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get RoleID of Automatoin User" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[UserKey_RoleSO]</InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="FolderID">[FolderID]</InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_AutomationDeveloperNewDawn]</InArgument>
-                                      <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">[JSONOutput]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_RelativeEndpoint">odata/Roles?%24filter=DisplayName eq 'Automation User'</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder" />
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_ExportOption">Id</InArgument>
+                                      <OutArgument x:TypeArguments="x:String" x:Key="out_Response">[RoleID_AutomationUser]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:InvokeWorkflowFile>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID9">
+                                    <FlowStep x:Name="__ReferenceID5">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">200,1428.3</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,94</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">300,1522.3 300,1685.1</av:PointCollection>
+                                          <av:Point x:Key="ShapeLocation">200,1152.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,83</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">300,1235.5 300,1278.3</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign Automation Leads to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Custom\AssignUsersToFolder.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assing RoleSO to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_AssignUsersToFolder.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[UserKey_AutomationLeads]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[UserKey_RoleSO]</InArgument>
                                           <InArgument x:TypeArguments="x:String" x:Key="FolderID">[FolderID]</InArgument>
-                                          <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_FolderAdministrator]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_AutomationDeveloperNewDawn]</InArgument>
                                           <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">[JSONOutput]</InArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
@@ -366,14 +369,143 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID0">
+                                        <FlowStep x:Name="__ReferenceID6">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">200,1685.1</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:Point x:Key="ShapeLocation">200,1278.3</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,94</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">300,1372.3 300,1405.3</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message Process End" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Framework] Process - End&quot;]" />
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign Automation Leads to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_AssignUsersToFolder.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[UserKey_AutomationLeads]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="FolderID">[FolderID]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_FolderAdministrator]</InArgument>
+                                              <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">[JSONOutput]</InArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:InvokeWorkflowFile>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID11">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">200,1405.3</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,123</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">300,1528.3 300,1568.3</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Sequence sap2010:Annotation.AnnotationText="Assign Automation User to support" DisplayName="Get ADGroup and set rights" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="x:String" Name="GroupID" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Custom\UiPath_API\UiPath_API_SearchADGroup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_SearchADGroup.xaml">
+                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="in_Groupname">
+                                                      <Literal x:TypeArguments="x:String">Support NewDawn</Literal>
+                                                    </InArgument>
+                                                    <OutArgument x:TypeArguments="x:String" x:Key="out_GroupID">
+                                                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="GroupID" />
+                                                    </OutArgument>
+                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:InvokeWorkflowFile>
+                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign ADGroup to Folder" DisplayName="UiPath_API_AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_AssignUsersToFolder.xaml">
+                                                  <ui:InvokeWorkflowFile.Arguments>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="GroupID" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="FolderID">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FolderID" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">
+                                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="RoleID_AutomationUser" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">
+                                                      <VisualBasicValue x:TypeArguments="njl:JObject" ExpressionText="JSONOutput" />
+                                                    </InArgument>
+                                                    <InArgument x:TypeArguments="x:Boolean" x:Key="in_Group">
+                                                      <Literal x:TypeArguments="x:Boolean" />
+                                                    </InArgument>
+                                                  </ui:InvokeWorkflowFile.Arguments>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:InvokeWorkflowFile>
+                                              </Sequence>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID9">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">200,1568.3</av:Point>
+                                                      <av:Size x:Key="ShapeSize">200,123</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">300,1691.3 300,1722.3</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Sequence sap2010:Annotation.AnnotationText="Assign Automatoin Dev to AD Group" DisplayName="Get ADGroup and set rights" sap:VirtualizedContainerService.HintSize="450,439" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Custom\UiPath_API\UiPath_API_SearchADGroup.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_SearchADGroup.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Groupname">["role_dev_" &amp; in_Customer]</InArgument>
+                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_GroupID">[GroupID_RoleDevKlant]</OutArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:InvokeWorkflowFile>
+                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign ADGroup to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_AssignUsersToFolder.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[GroupID_RoleDevKlant]</InArgument>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="FolderID">[FolderID]</InArgument>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_AutomationDeveloperNewDawn]</InArgument>
+                                                        <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">[JSONOutput]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Boolean" x:Key="in_Group">True</InArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:InvokeWorkflowFile>
+                                                  </Sequence>
+                                                  <FlowStep.Next>
+                                                    <FlowStep x:Name="__ReferenceID0">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">200,1722.3</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:LogMessage DisplayName="Log Message Process End" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;[Framework] Process - End&quot;]" />
+                                                    </FlowStep>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
                                         </FlowStep>
                                       </FlowStep.Next>
                                     </FlowStep>
@@ -396,118 +528,13 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">569.8,470.70000000000005</av:Point>
-          <av:Size x:Key="ShapeSize">200,83</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">669.8,553.7 669.8,583.7 669.5,583.7 669.5,606.4</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get Key of AAD Group" DisplayName="PerformAPICall_LocalOrchestrator_DirectoryService.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_LocalOrchestrator_DirectoryService.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_RelativeEndpoint">["api/DirectoryService/SearchForUsersAndGroups?searchContext=Groups&amp;domain=autogen&amp;prefix=" &amp; in_ADGroup]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Subfolder" />
-          <OutArgument x:TypeArguments="njl:JArray" x:Key="out_JSONResponse">[JArray]</OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_ExportOption">value</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-      <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID5" Condition="[JArray.Count = 1]" DisplayName="1 AAD Group found?" sap:VirtualizedContainerService.HintSize="115,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">612,606.4</av:Point>
-              <av:Size x:Key="ShapeSize">115,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">612,649.9 423,649.9 423,775.7 453,775.7</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">727,649.9 757,649.9 757,649.6 860,649.6</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <FlowDecision.True>
-            <FlowStep x:Name="__ReferenceID4">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">453,734.7</av:Point>
-                  <av:Size x:Key="ShapeSize">434,82</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">670,816.7 670,846.7 423,846.7 423,816.7 299.8,816.7 299.8,846.3</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign AutomationLeadsKey" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[UserKey_ADGroup]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[JArray(0)("identifier").ToString]</InArgument>
-                </Assign.Value>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </Assign>
-              <FlowStep.Next>
-                <x:Reference>__ReferenceID3</x:Reference>
-              </FlowStep.Next>
-            </FlowStep>
-          </FlowDecision.True>
-          <FlowDecision.False>
-            <FlowStep x:Name="__ReferenceID6">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">860,623.6</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Throw Exception="[new Exception(&quot;AAD Group search: incorrect responses: &quot; &amp; JArray.ToString )]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Throw_2">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </Throw>
-            </FlowStep>
-          </FlowDecision.False>
-        </FlowDecision>
-      </FlowStep.Next>
-    </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">450,1551.1</av:Point>
-          <av:Size x:Key="ShapeSize">200,83</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">550,1634.1 550,1664.1 300,1664.1 300,1685.1</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign ADGroup to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Custom\AssignUsersToFolder.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="UserKey_RoleSO">[UserKey_ADGroup]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="FolderID">[FolderID]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="RoleID_AutomationDeveloperNewDawn">[RoleID_AutomationDeveloperNewDawn]</InArgument>
-          <InArgument x:TypeArguments="njl:JObject" x:Key="JSONOutput">[JSONOutput]</InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
     <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
   </Flowchart>
