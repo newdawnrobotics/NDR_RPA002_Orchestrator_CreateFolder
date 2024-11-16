@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetToken" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1101.6,5492.8" sap2010:WorkflowViewState.IdRef="GetToken_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nm="clr-namespace:NDR_Common_Activities.MFA;assembly=NDR.Common.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetToken" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,5487" sap2010:WorkflowViewState.IdRef="GetToken_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nm="clr-namespace:NDR_Common_Activities.MFA;assembly=NDR.Common.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -137,7 +137,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="1112,5428" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="1112,5422" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ResponseContent" />
       <Variable x:TypeArguments="x:Int32" Name="ResponseCode" />
@@ -149,14 +149,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1049.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;GetToken_Personal started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Automation Cloud" sap:VirtualizedContainerService.HintSize="1049.6,4031.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V2" WindowResize="Maximize">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;GetToken_Personal started&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Automation Cloud" sap:VirtualizedContainerService.HintSize="1050,4028" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,3814.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014,3811" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Username_Microsoft" />
               <Variable x:TypeArguments="ss:SecureString" Name="Password_Microsoft" />
@@ -168,9 +168,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,304" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,304" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -200,8 +200,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="MicrosoftAccount_Orchestrator" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="952,143.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_Microsoft]" Username="[Username_Microsoft]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0116'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[Username_Microsoft]" Version="V3">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="MicrosoftAccount_Orchestrator" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="952,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_Microsoft]" Username="[Username_Microsoft]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0116'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,254" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[Username_Microsoft]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="730, 532, 479, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBox" FriendlyName="'INPUT i0116'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' type='email' class='form-control ltr_override input ext-input text-box ext-text-box' aaname='' /&gt;" Guid="eaf6e087-8a65-4494-baa1-cf829c491938" InformativeScreenshot="7b06a2ecb3d6e4304bcb90395688f520.png" ScopeSelectorArgument="&lt;html app='chrome.exe' omit:title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NTypeInto.Target>
@@ -216,7 +216,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="952,193.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="952,193" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>

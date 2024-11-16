@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.0.0",
-  "projectVersion": "1.0.2-alpha.5",
+  "projectVersion": "1.0.2-alpha.6",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -120,6 +120,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "Tests\\Custom\\PerformAPICall_CloudOrchestrator_DirectoryService_GET_TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b2ac2714-764f-4d45-9fc6-ea9486dd1a29",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Custom\\UiPath_API\\UiPath_API_SearchADGroup_TestCase.xaml"
       }
     ],
     "modernBehavior": true
