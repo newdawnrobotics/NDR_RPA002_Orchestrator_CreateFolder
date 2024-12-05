@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetToken" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1140,5487" sap2010:WorkflowViewState.IdRef="GetToken_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nm="clr-namespace:NDR_Common_Activities.MFA;assembly=NDR.Common.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetToken" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1102,2625" sap2010:WorkflowViewState.IdRef="GetToken_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:nm="clr-namespace:NDR_Common_Activities.MFA;assembly=NDR.Common.Activities" xmlns:nwe="clr-namespace:NDR_Common_Activities.Web.Edge;assembly=NDR.Common.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -56,6 +56,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>NDR_Common_Activities.Web.Edge</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -135,9 +137,11 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="1112,5422" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetToken" sap:VirtualizedContainerService.HintSize="1112,2560" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ResponseContent" />
       <Variable x:TypeArguments="x:Int32" Name="ResponseCode" />
@@ -150,169 +154,39 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;GetToken_Personal started&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Automation Cloud" sap:VirtualizedContainerService.HintSize="1050,4028" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Automation Cloud" sap:VirtualizedContainerService.HintSize="1050,1170" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" IsIncognito="True" OpenMode="Always" ScopeGuid="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014,3811" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,953" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Username_Microsoft" />
               <Variable x:TypeArguments="ss:SecureString" Name="Password_Microsoft" />
               <Variable x:TypeArguments="x:String" Name="MicrosoftToken" />
               <Variable x:TypeArguments="x:String" Name="ResponseURL" />
+              <Variable x:TypeArguments="ss:SecureString" Name="MicrosoftTokenKey" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="952,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="MicrosoftAccount_Orchestrator_Authenticator" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_4" Password="[MicrosoftTokenKey]" />
+            <nwe:Edge_MicrosoftLogin in_OrchestratorFolder="{x:Null}" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="Edge_MicrosoftLogin_1" in_Credentials="MicrosoftAccount_Orchestrator" in_SecretKey="[new Net.NetworkCredential(String.Empty,MicrosoftTokenKey).Password]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,304" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="554,1686" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Continue with Microsoft'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://account.uipath.com/login?state=hKFo2SB1bEVWRW1vRUgydWVhMkhkUHYxLTc4Sk1QS1YzU2puOKFupWxvZ2luo3RpZNkgM1ZCeGlKR1lWdWFydERKYldjaXIxd24xVS16cWFYN0KjY2lk2SAyeXQ5SGRGNDVPMDA2SDlxZFBjUDlhczVjZEdibkNXcw&amp;client=2yt9HdF45O006H9qdPcP9as5cdGbnCWs&amp;protocol=oauth2&amp;audience=https%3A%2F%2Fuipath.eu.auth0.com%2Fapi%2Fv2%2F&amp;scope=openid%20profile%20email%20read%3Acurrent_user%20update%3Acurrent_user_metadata&amp;redirect_uri=https%3A%2F%2Fcloud.uipath.com%2Fportal_%2FauthCallback&amp;type=login&amp;ecommerceRedirect=false&amp;redirectPath=&amp;subscription_plan=&amp;service_redirect_uri=&amp;retryUrl=%2Fportal_%2Fenterprisesso&amp;product_name=UiPath%20Automation%20Cloud&amp;company_code=B2B_CP&amp;platform_name=UiPath%20Platform&amp;cloudrpa_signup_subdomain=%2Fportal_&amp;register_endpoint=%2Fregister&amp;use_local_registration=false&amp;response_type=code&amp;response_mode=query&amp;nonce=MVF1M2ZQNldKM1Yzc0FvcV9EU1N5TXRNV1RFVG9WQUN6emIyWkVCSDN%2BTQ%3D%3D&amp;code_challenge=PLTBrmuaUfeHOeJmMDScfHW40_B1k_vg_ESmts5NOA8&amp;code_challenge_method=S256&amp;auth0Client=eyJuYW1lIjoiYXV0aDAtcmVhY3QiLCJ2ZXJzaW9uIjoiMS4yLjAifQ%3D%3D" DesignTimeRectangle="725, 559, 488, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Continue with Microsoft'" FullSelectorArgument="&lt;webctrl aaname='Continue with Microsoft' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Continue with Microsoft' tag='BUTTON' type='button' class='MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeLarge MuiButton-outlinedSizeLarge MuiButton-fullWidth jss27 css-g9vppd' check:innerText='Continue with Microsoft' /&gt;" Guid="b7852da1-97da-4169-83e7-9eff0d7f5da5" InformativeScreenshot="a4933a806a0b79404882f63942a1bf21.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Continue with UiPath' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="MicrosoftAccount_Orchestrator" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="952,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_Microsoft]" Username="[Username_Microsoft]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0116'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,254" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[Username_Microsoft]" Version="V3">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="730, 532, 479, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBox" FriendlyName="'INPUT i0116'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' type='email' class='form-control ltr_override input ext-input text-box ext-text-box' aaname='' /&gt;" Guid="eaf6e087-8a65-4494-baa1-cf829c491938" InformativeScreenshot="7b06a2ecb3d6e4304bcb90395688f520.png" ScopeSelectorArgument="&lt;html app='chrome.exe' omit:title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-              <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                </uix:VerifyExecutionTypeIntoOptions>
-              </uix:NTypeInto.VerifyOptions>
-            </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="952,193" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
-            <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="952,542.4" sap2010:WorkflowViewState.IdRef="RetryScope_1" RetryInterval="00:00:03">
-              <ui:RetryScope.ActivityBody>
-                <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="449.6,366.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0118'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" SecureText="[Password_Microsoft]" Version="V3">
-                      <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="730, 602, 479, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBoxPassword" FriendlyName="'INPUT i0118'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control input ext-input text-box ext-text-box' aaname='' /&gt;" Guid="0d1d3da3-b512-4291-96a0-a7ceb2c3f1ff" InformativeScreenshot="f00c447e641b57803eaa85eeb9690404.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                      </uix:NTypeInto.Target>
-                      <uix:NTypeInto.VerifyOptions>
-                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears" Retry="True" Timeout="3" />
-                      </uix:NTypeInto.VerifyOptions>
-                    </uix:NTypeInto>
-                  </Sequence>
-                </ActivityAction>
-              </ui:RetryScope.ActivityBody>
-              <ui:RetryScope.Condition>
-                <ActivityFunc x:TypeArguments="x:Boolean" />
-              </ui:RetryScope.Condition>
-            </ui:RetryScope>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="952,193.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="952,1707.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1488.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;MFA needed&quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ik kan'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="730, 842, 474, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="Text" FriendlyName="'Ik kan'" FullSelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' type='' class='' aaname='Ik kan mijn Microsoft Authenticator-app op dit moment niet gebruiken' check:innerText='Ik kan mijn Microsoft Authenticator-app op dit moment niet gebruiken' /&gt;" Guid="da06b1ea-8b94-4c20-9043-1f1d5c4cfb5d" InformativeScreenshot="33fd6e38af7e3bb98b335d3bb82eca79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Gebruik een'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="810, 665, 385, 22" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Gebruik een'" FullSelectorArgument="&lt;webctrl aaname='*verificat*code*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='*verificat*code*' tag='DIV' type='' class='' check:text='Gebruik een verificatiecode' /&gt;" Guid="bbf78932-fe30-40ce-9537-d7bd7194b42d" InformativeScreenshot="703a731fab38c37462ed0129021f00a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <nm:GetTokenForMFA DisplayName="GetTokenForMFA zorgmail" sap:VirtualizedContainerService.HintSize="387.2,194.4" sap2010:WorkflowViewState.IdRef="GetTokenForMFA_2" in_MFAType="Microsoft" in_SecretKey_String="tq2bjrqzw7lpdft6" out_Token="[MicrosoftToken]" />
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT idTxtBx_SAOTCC_OTC'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,254.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[MicrosoftToken]" Version="V3">
+                  <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="MicrosoftAccount_Orchestrator" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="492,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[Password_Microsoft]" Username="[Username_Microsoft]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0116'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="492,254" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[Username_Microsoft]" Version="V3">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="727, 679, 484, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBox" FriendlyName="'INPUT idTxtBx_SAOTCC_OTC'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Code' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Code' type='tel' class='form-control' aaname='' /&gt;" Guid="a2761d76-e4b9-4947-9f26-9873c48ec836" InformativeScreenshot="09f4e384c94d51ec4d40778acc8c35ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="730, 532, 479, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBox" FriendlyName="'INPUT i0116'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='loginfmt' type='email' class='form-control ltr_override input ext-input text-box ext-text-box' aaname='' /&gt;" Guid="eaf6e087-8a65-4494-baa1-cf829c491938" InformativeScreenshot="7b06a2ecb3d6e4304bcb90395688f520.png" ScopeSelectorArgument="&lt;html app='chrome.exe' omit:title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
                     <uix:NTypeInto.VerifyOptions>
                       <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -325,7 +199,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="492,193" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -340,25 +214,149 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
+                  <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="492,540" sap2010:WorkflowViewState.IdRef="RetryScope_1" RetryInterval="00:00:03">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,365" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT i0118'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,254" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" SecureText="[Password_Microsoft]" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="730, 602, 479, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBoxPassword" FriendlyName="'INPUT i0118'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control input ext-input text-box ext-text-box' aaname='' /&gt;" Guid="0d1d3da3-b512-4291-96a0-a7ceb2c3f1ff" InformativeScreenshot="f00c447e641b57803eaa85eeb9690404.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.VerifyOptions>
+                              <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears" Retry="True" Timeout="3" />
+                            </uix:NTypeInto.VerifyOptions>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
+                  </ui:RetryScope>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="492,193" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="492,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" Version="V3">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1485" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;MFA needed&quot;]" />
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ik kan'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="730, 842, 474, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="Text" FriendlyName="'Ik kan'" FullSelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' type='' class='' aaname='Ik kan mijn Microsoft Authenticator-app op dit moment niet gebruiken' check:innerText='Ik kan mijn Microsoft Authenticator-app op dit moment niet gebruiken' /&gt;" Guid="da06b1ea-8b94-4c20-9043-1f1d5c4cfb5d" InformativeScreenshot="33fd6e38af7e3bb98b335d3bb82eca79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Gebruik een'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="810, 665, 385, 22" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Gebruik een'" FullSelectorArgument="&lt;webctrl aaname='*verificat*code*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='*verificat*code*' tag='DIV' type='' class='' check:text='Gebruik een verificatiecode' /&gt;" Guid="bbf78932-fe30-40ce-9537-d7bd7194b42d" InformativeScreenshot="703a731fab38c37462ed0129021f00a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <nm:GetTokenForMFA DisplayName="GetTokenForMFA zorgmail" sap:VirtualizedContainerService.HintSize="388,192" sap2010:WorkflowViewState.IdRef="GetTokenForMFA_2" in_MFAType="Microsoft" in_SecretKey_String="tq2bjrqzw7lpdft6" out_Token="[MicrosoftToken]" />
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT idTxtBx_SAOTCC_OTC'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,254" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Text="[MicrosoftToken]" Version="V3">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/login" DesignTimeRectangle="727, 679, 484, 50" DesignTimeScaleFactor="1.3799999952316284" ElementType="InputBox" FriendlyName="'INPUT idTxtBx_SAOTCC_OTC'" FullSelectorArgument="&lt;webctrl tag='INPUT' aria-label='Code' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aria-label='Code' type='tel' class='form-control' aaname='' /&gt;" Guid="a2761d76-e4b9-4947-9f26-9873c48ec836" InformativeScreenshot="09f4e384c94d51ec4d40778acc8c35ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Volgende'" sap:VirtualizedContainerService.HintSize="388,195" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ef91ad4f-a718-4b38-8bac-3e13b452ae44" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://login.microsoftonline.com/common/oauth2/v2.0/authorize?prompt=select_account&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Faccount.uipath.com%2Flogin%2Fcallback&amp;scope=User.Read%20openid%20email%20profile%20&amp;state=4MF_sDMxmLD6OJf1EQFDQbQ2vsJfWUpv&amp;client_id=eb812cb0-7881-44a8-82f7-df95f812e34d&amp;sso_reload=true" DesignTimeRectangle="1063, 717, 149, 44" DesignTimeScaleFactor="1.3799999952316284" ElementType="Button" FriendlyName="'Volgende'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='win-button button_primary button ext-button primary ext-primary' aaname='Volgende' check:text='Volgende' /&gt;" Guid="4e8dd9df-0917-4147-a638-454193e508a8" InformativeScreenshot="e500822441a6f7604e44d4ace8291ea4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;No MFA needed&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' /&gt;" Guid="2b472e03-af52-4a30-99ef-8957434c036a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
                 </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;No MFA needed&quot;]" />
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl id='signInAnotherWay' tag='A' /&gt;" Guid="2b472e03-af52-4a30-99ef-8957434c036a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Aanmelden bij uw account' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-              </uix:NCheckState.Target>
-            </uix:NCheckState>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="952,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://cloud.uipath.com/identity_/connect/authorize?response_type=code&amp;client_id=3c3536a2-6576-46b1-a687-236c5067b6e1&amp;scope=OR.Users OR.Folders&amp;redirect_uri=https%3A%2F%2Foauth.pstmn.io%2Fv1%2Fcallback" Version="V3" />
-            <uix:NGetUrl CurrentUrl="[ResponseURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="952,87.2" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
-            <Assign sap:VirtualizedContainerService.HintSize="952,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://cloud.uipath.com/identity_/connect/authorize?response_type=code&amp;client_id=3c3536a2-6576-46b1-a687-236c5067b6e1&amp;scope=OR.Users&amp;redirect_uri=https%3A%2F%2Foauth.pstmn.io%2Fv1%2Fcallback" Version="V3" />
+            <uix:NGetUrl CurrentUrl="[ResponseURL]" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V3" />
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[CloudCode]</OutArgument>
               </Assign.To>
@@ -370,7 +368,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-9, -9, 1938, 1168" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH4wcPFxsu2s58agAAAg1JREFUWEft1r1rFEEYx/H4bhQJBnKosdHCwi6VREihRUzjC4gSonUQm/wB0UaLVEKilWAbTGkrqCAW6SxEFBFELKxiI4iSaOL3uzvPMVwsTu52E8GBD9zMMzP727u93e1ZHm2sbaRNF+AXVirmMf4YwMIMzuJCRdz7DlaxLoDpnNRTVXNvjKP5LVQSwD2wBbuxrewPxHi1AVyPXZjCU9zHEbQfINkJz0DbHcubfXiW+bx0to3T+IrY29891rQVoBf38Cy5gnTostlHHx7AOZ7tOTh+CT8Re89jK6y1FWAfFhG1aaRDl80+BvAaMe86HB/EY3zDR0Qw1RJA/TiBo/CnivFaAng9nMQpeD0cRKypJcBhvMUyvmMCsaa2AB/SmHe9q4g1/wP8mwFuIB26bPZRWYC9eIGo3UaxQbTUP4B3iHmTcLzjAN77HyFqD1Hc56P5GUNYQuv6jgPoFqL2GcOImgzpC0w+5zisdSWAd7IviPorXMMIzmAO+RNvAT4ZXduVADswi6jLhT5gfmRj+oT8G+osQPYbe5X7uPV2GvNaeRGez9541IUAY80Fe3ARPtNf4j3e4Alu4hiKucW68nMD/iT+k55jFFFrL0A0+4n/gv04BA/gS0tRy1sa8/Fr3fAq3qiSvwvQzebe2LwBHPTl8TKcVAX3vgsvzHUBZMEgVWoeXK0BarfBARprvwFZ98PAeJe6iAAAAABJRU5ErkJggg==" InformativeScreenshot="d20683acbda9ec31e55ef03561edfb2c.jpg" Selector="&lt;html app='chrome.exe' omit:title='Automation Cloud' /&gt;" Title="Automation Cloud" Url="https://cloud.uipath.com/newdawnrobotics/portal_/cloudrpa" />
+        <uix:TargetApp Area="-9, -9, 1938, 1168" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH4wcPFxsu2s58agAAAg1JREFUWEft1r1rFEEYx/H4bhQJBnKosdHCwi6VREihRUzjC4gSonUQm/wB0UaLVEKilWAbTGkrqCAW6SxEFBFELKxiI4iSaOL3uzvPMVwsTu52E8GBD9zMMzP727u93e1ZHm2sbaRNF+AXVirmMf4YwMIMzuJCRdz7DlaxLoDpnNRTVXNvjKP5LVQSwD2wBbuxrewPxHi1AVyPXZjCU9zHEbQfINkJz0DbHcubfXiW+bx0to3T+IrY29891rQVoBf38Cy5gnTostlHHx7AOZ7tOTh+CT8Re89jK6y1FWAfFhG1aaRDl80+BvAaMe86HB/EY3zDR0Qw1RJA/TiBo/CnivFaAng9nMQpeD0cRKypJcBhvMUyvmMCsaa2AB/SmHe9q4g1/wP8mwFuIB26bPZRWYC9eIGo3UaxQbTUP4B3iHmTcLzjAN77HyFqD1Hc56P5GUNYQuv6jgPoFqL2GcOImgzpC0w+5zisdSWAd7IviPorXMMIzmAO+RNvAT4ZXduVADswi6jLhT5gfmRj+oT8G+osQPYbe5X7uPV2GvNaeRGez9541IUAY80Fe3ARPtNf4j3e4Alu4hiKucW68nMD/iT+k55jFFFrL0A0+4n/gv04BA/gS0tRy1sa8/Fr3fAq3qiSvwvQzebe2LwBHPTl8TKcVAX3vgsvzHUBZMEgVWoeXK0BarfBARprvwFZ98PAeJe6iAAAAABJRU5ErkJggg==" InformativeScreenshot="d20683acbda9ec31e55ef03561edfb2c.jpg" Selector="&lt;html app='msedge.exe' omit:title='Automation Cloud' /&gt;" Title="Automation Cloud" Url="https://cloud.uipath.com/newdawnrobotics/portal_/cloudrpa" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -379,8 +377,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;CloudCode retrieved: &quot; &amp; CloudCode]" />
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="&quot;application/x-www-form-urlencoded&quot;" DisplayName="HTTP Request POST Token" EnableSSLVerification="True" EndPoint="https://cloud.uipath.com/identity_/connect/token" sap:VirtualizedContainerService.HintSize="1050,71" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[ResponseContent]" StatusCode="[ResponseCode]" TimeoutMS="6000">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;CloudCode retrieved: &quot; &amp; CloudCode]" />
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="&quot;application/x-www-form-urlencoded&quot;" DisplayName="HTTP Request POST Token" EnableSSLVerification="True" EndPoint="https://cloud.uipath.com/identity_/connect/token" sap:VirtualizedContainerService.HintSize="1050,70" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[ResponseContent]" StatusCode="[ResponseCode]" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -400,7 +398,7 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
-    <If Condition="[ResponseCode &lt;&gt; 200]" sap:VirtualizedContainerService.HintSize="1050,362" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[ResponseCode &lt;&gt; 200]" sap:VirtualizedContainerService.HintSize="1050,361" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>

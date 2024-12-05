@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1083.2,1876.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1140,1876.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -195,7 +195,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">199.8,465.1</av:Point>
                       <av:Size x:Key="ShapeSize">200,84</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">299.8,549.1 299.8,626.3</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">299.8,549.1 299.8,596.3</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get Key of role_so" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -216,9 +216,9 @@
                     <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">199.8,626.3</av:Point>
+                          <av:Point x:Key="ShapeLocation">199.8,596.3</av:Point>
                           <av:Size x:Key="ShapeSize">200,83.2</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">299.8,709.5 299.8,739.5 300,739.5 300,782.54</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">299.8,679.5 299.8,709.5 300,709.5 300,732.54</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Sequence DisplayName="POST - Create Folder" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -284,9 +284,9 @@
                         <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,782.54</av:Point>
+                              <av:Point x:Key="ShapeLocation">200,732.54</av:Point>
                               <av:Size x:Key="ShapeSize">200,96.8</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,879.3399999999999 300,891.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">300,829.3399999999999 300,871.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get RoleID of Automation Developer - NewDawn" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,96.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -307,9 +307,9 @@
                             <FlowStep x:Name="__ReferenceID7">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">200,891.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">200,871.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,96.8</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">300,988.3 300,1008.5</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,968.3 300,1008.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Get RoleID of Folder Administrator" DisplayName="PerformAPICall_CloudOrchestrator_GET.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,96.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Custom\PerformAPICall_CloudOrchestrator_GET.xaml">
@@ -378,7 +378,7 @@
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">200,1278.3</av:Point>
                                               <av:Size x:Key="ShapeSize">200,96.8</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">300,1375.1 300,1405.3</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">300,1375.1 300,1415.3</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Assign Automation Leads to Folder" DisplayName="Custom\AssignUsersToFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,96.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Custom\UiPath_API\UiPath_API_AssignUsersToFolder.xaml">
@@ -398,9 +398,9 @@
                                             <FlowStep x:Name="__ReferenceID11">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">200,1405.3</av:Point>
+                                                  <av:Point x:Key="ShapeLocation">200,1415.3</av:Point>
                                                   <av:Size x:Key="ShapeSize">200,127.2</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">300,1532.5 300,1568.3</av:PointCollection>
+                                                  <av:PointCollection x:Key="ConnectorLocation">300,1542.5 300,1578.3</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <Sequence sap2010:Annotation.AnnotationText="Assign Automation User to support" DisplayName="Get ADGroup and set rights" sap:VirtualizedContainerService.HintSize="200,127.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
@@ -443,12 +443,12 @@
                                                 <FlowStep x:Name="__ReferenceID9">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">200,1568.3</av:Point>
+                                                      <av:Point x:Key="ShapeLocation">200,1578.3</av:Point>
                                                       <av:Size x:Key="ShapeSize">200,127.2</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">300,1695.5 300,1722.3</av:PointCollection>
+                                                      <av:PointCollection x:Key="ConnectorLocation">300,1705.5 300,1722.3</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence sap2010:Annotation.AnnotationText="Assign Automatoin Dev to AD Group" DisplayName="Get ADGroup and set rights" sap:VirtualizedContainerService.HintSize="548.8,784.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                                  <Sequence sap2010:Annotation.AnnotationText="Assign Automatoin Dev to AD Group" DisplayName="Get ADGroup and set rights" sap:VirtualizedContainerService.HintSize="200,127.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
