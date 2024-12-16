@@ -138,7 +138,7 @@
                 <OutArgument x:TypeArguments="x:String">[Tenant]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Production_testtenant2</InArgument>
+                <InArgument x:TypeArguments="x:String">Production_Testtenant</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -154,7 +154,7 @@
       </ui:MultipleAssign>
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,347" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,346" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -197,9 +197,15 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Process workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework - NewDawn\Process.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Tenant">[Tenant]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_Customer">[Customer]</InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorCloudPrefix">[config("OrchestratorCloudPrefix")]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Tenant">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tenant" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Customer">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Customer" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_OrchestratorCloudPrefix">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="config(&quot;OrchestratorCloudPrefix&quot;)" />
+          </InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
     </Sequence>
