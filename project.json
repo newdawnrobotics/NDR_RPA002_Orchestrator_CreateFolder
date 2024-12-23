@@ -1,5 +1,6 @@
 {
   "name": "NDR_Orchestrator_CreateFolder",
+  "projectId": "bd4eb291-a221-4143-b0bb-ec01c2dc475e",
   "description": "Create folders in the orchestrator",
   "main": "Main.xaml",
   "dependencies": {
@@ -14,7 +15,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.0.0",
-  "projectVersion": "1.0.2-alpha.15",
+  "projectVersion": "1.0.2-alpha.13",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -129,7 +130,7 @@
         "fileName": "Tests\\Custom\\UiPath_API\\UiPath_API_SearchADGroup_TestCase.xaml"
       }
     ],
-    "modernBehavior": true
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

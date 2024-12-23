@@ -18,7 +18,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.AddQueueItem": [
@@ -39,7 +40,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.AddTransactionItem": [
@@ -60,7 +62,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.BeginProcess": [
@@ -75,7 +78,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.BulkAddQueueItems": [
@@ -96,7 +100,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.DeleteQueueItems": [
@@ -113,7 +118,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetJobs": [
@@ -130,7 +136,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetQueueItem": [
@@ -151,7 +158,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetQueueItems": [
@@ -172,7 +180,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetRobotAsset": [
@@ -193,7 +202,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetRobotCredential": [
@@ -214,7 +224,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetTransactionItem": [
@@ -229,7 +240,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.InvokeProcess": [
@@ -250,7 +262,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.PostponeTransactionItem": [
@@ -267,7 +280,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.QueueTrigger": [
@@ -302,7 +316,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetAsset": [
@@ -323,7 +338,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetCredential": [
@@ -344,7 +360,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetTransactionProgress": [
@@ -361,7 +378,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetTransactionStatus": [
@@ -378,7 +396,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.StartJob": [
@@ -399,7 +418,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.StopJob": [
@@ -416,7 +436,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.DeleteStorageFile": [
@@ -437,7 +458,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.DownloadStorageFile": [
@@ -458,7 +480,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.ListStorageFiles": [
@@ -479,7 +502,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.ReadStorageText": [
@@ -500,7 +524,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.UploadStorageFile": [
@@ -521,7 +546,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.WriteStorageText": [
@@ -542,7 +568,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.TimeTrigger": [
@@ -564,7 +591,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.WaitQueueItem": [
@@ -585,7 +613,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.CreateEventConnections": [
@@ -652,9 +681,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.DeleteEventConnections": [
@@ -685,7 +716,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.ForEachEventConnections": [
@@ -752,9 +784,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.ForwardEventConnections": [
@@ -785,7 +819,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.GetEventListConnections": [
@@ -852,9 +887,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.ModifyEventConnections": [
@@ -885,7 +922,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.RsvpConnections": [
@@ -916,7 +954,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.Triggers.EventReplied": [
@@ -959,7 +998,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.Triggers.EventUpdated": [
@@ -1002,7 +1042,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.Triggers.NewEventCreated": [
@@ -1045,7 +1086,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Calendar.Triggers.NewEventInvitationReceived": [
@@ -1088,7 +1130,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.AddSheetConnections": [
@@ -1159,9 +1202,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.CreateWorkbookConnections": [
@@ -1232,9 +1277,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.DeleteRangeConnections": [
@@ -1305,9 +1352,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.DeleteSheetConnections": [
@@ -1378,9 +1427,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.ForEachRowConnections\u00601": [
@@ -1451,9 +1502,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.ForEachSheetConnections": [
@@ -1524,9 +1577,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.ReadCellConnections\u00601": [
@@ -1597,9 +1652,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.ReadRangeConnections\u00601": [
@@ -1670,9 +1727,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.RenameSheetConnections": [
@@ -1743,9 +1802,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.WriteCellConnections": [
@@ -1816,9 +1877,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.WriteColumnConnections": [
@@ -1889,9 +1952,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.WriteRangeConnections": [
@@ -1962,9 +2027,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Excel.WriteRowConnections": [
@@ -2035,9 +2102,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.CopyItemConnections": [
@@ -2108,7 +2177,8 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           },
           {
             "Type": "Property",
@@ -2149,9 +2219,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.CreateFolderConnections": [
@@ -2222,9 +2294,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.DeleteItemConnections": [
@@ -2295,9 +2369,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.DownloadFileConnections": [
@@ -2368,9 +2444,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.ForEachFileFolderConnections": [
@@ -2441,9 +2519,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.GetFileFolderConnections": [
@@ -2514,9 +2594,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.GetFileListConnections": [
@@ -2587,9 +2669,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.MoveItemConnections": [
@@ -2660,7 +2744,8 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           },
           {
             "Type": "Property",
@@ -2701,9 +2786,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.ShareItemConnections": [
@@ -2774,9 +2861,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.Triggers.FileUpdated": [
@@ -2871,9 +2960,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.Triggers.NewFileCreated": [
@@ -2968,9 +3059,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.UploadFilesConnections": [
@@ -3041,9 +3134,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Files.UseDriveCard": [
@@ -3074,7 +3169,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.ArchiveEmailConnections": [
@@ -3105,7 +3201,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.DeleteEmailConnections": [
@@ -3136,7 +3233,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.DownloadEmailAttachments": [
@@ -3167,7 +3265,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.DownloadEmailConnections": [
@@ -3198,7 +3297,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.ForEachEmailConnections": [
@@ -3265,9 +3365,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.ForwardEmailConnections": [
@@ -3298,7 +3400,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.GetEmailByIdConnections": [
@@ -3329,7 +3432,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.GetEmailListConnections": [
@@ -3396,9 +3500,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.GetNewestEmail": [
@@ -3465,9 +3571,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.MarkAsReadUnreadConnections": [
@@ -3498,7 +3606,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.MoveEmailConnections": [
@@ -3565,9 +3674,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.ReplyToEmailConnections": [
@@ -3598,7 +3709,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.SendMailConnections": [
@@ -3629,7 +3741,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.SetEmailCategoriesConnections": [
@@ -3660,7 +3773,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.Triggers.EmailSent": [
@@ -3703,7 +3817,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Mail.Triggers.NewEmailReceived": [
@@ -3782,9 +3897,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.AddListItemConnections\u00601": [
@@ -3855,9 +3972,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.DeleteSharepointListItemsConnections\u00601": [
@@ -3928,9 +4047,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.GetListItemsConnections\u00601": [
@@ -4001,9 +4122,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.GetSingleSharepointListItemConnections\u00601": [
@@ -4074,9 +4197,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.Triggers.SharepointListItemAdded\u00601": [
@@ -4171,9 +4296,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.Triggers.SharepointListItemUpdated\u00601": [
@@ -4268,9 +4395,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.MicrosoftOffice365.Activities.Sharepoint.UpdateListItemConnections\u00601": [
@@ -4341,9 +4470,11 @@
                 "ValueSource": "Constant"
               }
             },
-            "SubBindings": []
+            "SubBindings": [],
+            "DefaultValueSource": "Property"
           }
-        ]
+        ],
+        "DefaultValueSource": "Property"
       }
     ]
   }
